@@ -1,0 +1,66 @@
+version: '3'
+services:
+    webserver:
+        container_name: webserver
+        image: nginx:alpine
+        ports:
+            - 80:80
+        volumes:
+            - ./api/:/var/www/
+            - ./webserver/nginx.conf:/etc/nginx/nginx.conf
+            - ./webserver/sites/:/etc/nginx/conf.d/
+        networks:
+            - frontend
+            - backend
+        depends_on:
+          - app
+          - api
+          - phpmyadmin
+    app:
+        container_name: app
+        build:
+            context: ./frontend
+            dockerfile: Dockerfile
+        networks:
+          - backend
+    api:
+        container_name: api
+        build:
+            context: ./api
+            dockerfile: Dockerfile
+        networks:
+          - backend
+        volumes:
+            - ./api/:/var/www
+    mysql:
+        container_name: mysql
+        image: mysql:8.0
+        networks:
+            - backend
+        volumes:
+            - "mysqlvolume:/var/lib/mysql"
+        environment:
+            MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+            MYSQL_DATABASE: '${DB_DATABASE}'
+            MYSQL_USER: '${DB_USERNAME}'
+            MYSQL_PASSWORD: '${DB_PASSWORD}'
+    phpmyadmin:
+        container_name: phpmyadmin
+        image: phpmyadmin/phpmyadmin:5.1
+        networks:
+          - backend
+        environment:
+            PMA_ARBITRARY: 1
+            PMA_HOST: mysql
+            PMA_USER: '${DB_USERNAME}'
+            PMA_PASSWORD: '${DB_PASSWORD}'
+        depends_on:
+          - mysql
+
+networks:
+    frontend:
+    backend:
+
+volumes:
+    mysqlvolume:
+        driver: local
