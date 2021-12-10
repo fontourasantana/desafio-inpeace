@@ -14,7 +14,7 @@ Este projeto tem como objetivo unir os módulos [APP](https://github.com/fontour
 |:-:|:-:|
 |[Webserver Nginx](https://www.nginx.com/)|1.21.4|
 |[Lumen Framework](https://lumen.laravel.com/)|8.3.2|
-|[Nuxt.Js](https://nuxtjs.org/)|2.15.7|
+|[Nuxt.Js](https://nuxtjs.org/)|2.15.8|
 |[MySQL](https://www.mysql.com/)|8.0|
 |[phpMyAdmin](https://www.phpmyadmin.net/)|5.1|
 
