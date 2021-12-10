@@ -28,11 +28,15 @@ git clone https://github.com/fontourasantana/desafio-inpeace
 cp .env.example .env
 ```
 **Obs:** O webserver por padrão está configurado para rodar na porta **80**, caso essa porta esteja sendo utilizada no sistema, altere a váriavel de ambiente **WEBSERVER_PORT** no .env
-- Com as variáveis de ambiente configuradas, para instalar e rodar o projeto execute:
+- Com as variáveis de ambiente configuradas, para preparar o projeto para execução, rode:
 ```bash
 make
 ```
-**Atenção:** Caso atualize a **WEBSERVER_PORT** após rodar o comando acima, é necessário rebuildar a imagem da aplicação. Para isso execute:
+**Atenção:** Para o funcionamento adequado da API, é necessário rodar as migrations. Para isso rode o seguinte comando com o projeto em execução:
+```bash
+make run-migrates
+```
+**Atenção:** Caso atualize a **WEBSERVER_PORT** após rodar o comando `make`, é necessário rebuildar a imagem da aplicação. Para isso execute:
 ```bash
 make build-app
 ```
