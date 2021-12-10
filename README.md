@@ -24,6 +24,10 @@ cp .env.example .env
 ```bash
 make
 ```
+**Atenção:** Caso atualize a **WEBSERVER_PORT** após rodar o comando acima, é necessário rebuildar a imagem da aplicação. Para isso execute:
+```bash
+make build-app
+```
 ### Executando projeto
 ```bash
 make up
