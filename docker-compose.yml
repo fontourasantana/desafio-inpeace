@@ -22,7 +22,7 @@ services:
             context: ./app
             dockerfile: Dockerfile
             args:
-                API_BASE_URL: 'http://api.localhost:${WEBSERVER_PORT}'
+                API_BASE_URL: '${API_BASE_URL}:${WEBSERVER_PORT}'
         image: desafio-inpeace-app:latest
         networks:
           - backend
