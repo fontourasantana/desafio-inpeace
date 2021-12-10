@@ -13,7 +13,7 @@ prepare-env:
 	@cp .env api/.env
 build-api:
 	@echo "\033[1;32mBuildando API\033[0m"
-	@docker build -f api/Dockerfile -t desafio-inpeace-api --build-arg GID=$(GID) api
+	@docker build -f api/Dockerfile -t desafio-inpeace-api --build-arg GID=$(GID) --build-arg UID=$(UID) api
 build-app:
 	@echo "\033[1;32mBuildando APP\033[0m"
 	@docker build -f app/Dockerfile -t desafio-inpeace-app --build-arg API_BASE_URL=$(API_BASE_URL):$(WEBSERVER_PORT) app
