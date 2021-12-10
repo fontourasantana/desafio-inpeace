@@ -53,11 +53,11 @@ make up
 ### Rotas da API
 |Identificação|URL|METHOD|
 |:---:|:---:|:---:|
-|    Versão do Lumen     | localhost |**GET**|
-|    Listar usuários     | localhost/usuarios |**GET**|
-|    Salvar usuário     | localhost/usuarios |**POST**|
-|    Ver usuário     | localhost/usuarios/{id} |**GET**|
-|    Atualizar usuário     | localhost/usuarios/{id} |**PUT**|
-|    Deletar usuário     | localhost/usuarios/{id} |**DELETE**|
+|    Versão do Lumen     | {API_URL} |**GET**|
+|    Listar usuários     | {API_URL}/usuarios |**GET**|
+|    Salvar usuário     | {API_URL}/usuarios |**POST**|
+|    Ver usuário     | {API_URL}/usuarios/{id} |**GET**|
+|    Atualizar usuário     | {API_URL}/usuarios/{id} |**PUT**|
+|    Deletar usuário     | {API_URL}/usuarios/{id} |**DELETE**|
 
-*Rotas considerando webserver rodando na porta 80*
+**Obs:** Considerar **{API_URL}** a rota para a URL da API fornecida pelo webserver
