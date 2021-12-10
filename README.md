@@ -1,6 +1,14 @@
 # Desafio Inpeace
 Este projeto tem como objetivo unir os módulos [APP](https://github.com/fontourasantana/desafio-inpeace-app) e [API](https://github.com/fontourasantana/desafio-inpeace-api) implementados para o desafio proposto.
 
+## Requisitos
+|Ferramenta|Versão Testada|
+|:-:|:-:|
+|[Docker Engine](https://docs.docker.com/engine/)|20.10.11|
+|[Docker Compose](https://docs.docker.com/compose/)|1.28.5|
+|[GNU Make](https://www.gnu.org/software/make/)|4.2.1|
+
+
 ## Plataforma
 |Ferramenta|Versão|
 |:-:|:-:|
