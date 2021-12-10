@@ -2,7 +2,7 @@ include .env
 GID = $(shell id -g)
 UID = $(shell id -u)
 
-default: install prepare-env build-api build-app up migrate
+default: install prepare-env build-api build-app up
 install:
 	@echo "\033[1;32mClonando Desafio Inpeace - Módulo Api\033[0m"
 	@git clone https://github.com/fontourasantana/desafio-inpeace-api api
@@ -20,6 +20,6 @@ build-app:
 up:
 	@echo "\033[1;32mIniciando aplicação completa\033[0m"
 	@docker-compose up -d
-migrate:
+run-migrates:
 	@echo "\033[1;32mRodando migrations\033[0m"
 	@docker-compose exec api php artisan migrate
