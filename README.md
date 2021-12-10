@@ -1,6 +1,15 @@
 # Desafio Inpeace
 Este projeto tem como objetivo unir os módulos [APP](https://github.com/fontourasantana/desafio-inpeace-app) e [API](https://github.com/fontourasantana/desafio-inpeace-api) implementados para o desafio proposto.
 
+## Plataforma inclue
+|Ferramenta|Versão|
+|:-:|:-:|
+|[Webserver Nginx](https://www.nginx.com/)|1.21.4|
+|[Lumen Framework](https://lumen.laravel.com/)|8.3.1|
+|[Nuxt.Js](https://nuxtjs.org/)|2.15.7|
+|[MySQL](https://www.mysql.com/)|8.0|
+|[phpMyAdmin](https://www.phpmyadmin.net/)|5.1|
+
 ### Primeiros passos
 - Primeiramente é necessário definir qual porta o webserver irá rodar. Por padrão ele está configurado para rodar na porta **80**, caso essa porta esteja sendo utilizada no sistema, basta alterar a váriavel de ambiente **WEBSERVER_PORT** no .env.example
 - Com as variáveis de ambiente configuradas, para instalar e configurar o projeto execute:
