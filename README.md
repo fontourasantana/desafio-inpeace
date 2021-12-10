@@ -11,8 +11,16 @@ Este projeto tem como objetivo unir os módulos [APP](https://github.com/fontour
 |[phpMyAdmin](https://www.phpmyadmin.net/)|5.1|
 
 ### Primeiros passos
-- Primeiramente é necessário definir qual porta o webserver irá rodar. Por padrão ele está configurado para rodar na porta **80**, caso essa porta esteja sendo utilizada no sistema, basta alterar a váriavel de ambiente **WEBSERVER_PORT** no .env.example
-- Com as variáveis de ambiente configuradas, para instalar e configurar o projeto execute:
+- Primeiro é necessário fazer a cópia do repositório
+```bash
+git clone https://github.com/fontourasantana/desafio-inpeace
+```
+- Após copiar o repositório copie o exemplo do .env fornecido no repositório
+```bash
+cp .env.example .env
+```
+**Obs:** O webserver por padrão está configurado para rodar na porta **80**, caso essa porta esteja sendo utilizada no sistema, altere a váriavel de ambiente **WEBSERVER_PORT** no .env
+- Com as variáveis de ambiente configuradas, para instalar e rodar o projeto execute:
 ```bash
 make
 ```
