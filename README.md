@@ -1,7 +1,7 @@
 # Desafio Inpeace
 Este projeto tem como objetivo unir os módulos [APP](https://github.com/fontourasantana/desafio-inpeace-app) e [API](https://github.com/fontourasantana/desafio-inpeace-api) implementados para o desafio proposto.
 
-## Plataforma inclue
+## Plataforma
 |Ferramenta|Versão|
 |:-:|:-:|
 |[Webserver Nginx](https://www.nginx.com/)|1.21.4|
