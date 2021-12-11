@@ -2,7 +2,10 @@ include .env
 GID = $(shell id -g)
 UID = $(shell id -u)
 
-default: install prepare-env build-api build-app up
+default: prepare-install install prepare-env build-api build-app up
+prepare-install:
+	@echo "\033[1;32mPreparando ambiente para instalação\033[0m"
+	@rm -rf api app
 install:
 	@echo "\033[1;32mClonando Desafio Inpeace - Módulo Api\033[0m"
 	@git clone https://github.com/fontourasantana/desafio-inpeace-api api
