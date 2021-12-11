@@ -32,3 +32,6 @@ run-migrates:
 run-seeders:
 	@echo "\033[1;32mRodando seeders\033[0m"
 	@docker-compose exec api php artisan db:seed --class=UsersTableSeeder
+run-tests:
+	@echo "\033[1;32mRodando testes\033[0m"
+	@docker run -it --rm desafio-inpeace-api:latest php ./vendor/bin/phpunit
