@@ -2,7 +2,7 @@ include .env
 GID = $(shell id -g)
 UID = $(shell id -u)
 
-default: prepare-install install prepare-env build-api build-app up
+default: prepare-install install build-api build-app up
 prepare-install:
 	@echo "\033[1;32mPreparando ambiente para instalação\033[0m"
 	@rm -rf api app
@@ -11,11 +11,9 @@ install:
 	@git clone https://github.com/fontourasantana/desafio-inpeace-api api
 	@echo "\033[1;32mClonando Desafio Inpeace - Módulo App\033[0m"
 	@git clone https://github.com/fontourasantana/desafio-inpeace-app app
-prepare-env:
-	@echo "\033[1;32mPreparando arquivos .env\033[0m"
-	@cp .env api/.env
 build-api:
 	@echo "\033[1;32mBuildando API\033[0m"
+	@cp .env api/.env
 	@docker build -f api/Dockerfile -t desafio-inpeace-api --build-arg GID=$(GID) --build-arg UID=$(UID) api
 build-app:
 	@echo "\033[1;32mBuildando APP\033[0m"
