@@ -40,9 +40,18 @@ make run-migrates
 ```bash
 make build-app
 ```
+**Opcional:** Para uma melhor experiência, caso deseje que o banco de dados seja povoado você pode rodar o comando que faz o seed no banco:
+```bash
+make run-seeders
+```
 ### Executando projeto
+- Para iniciar a execução do projeto rode o comando:
 ```bash
 make up
+```
+- Para parar a execução do projeto rode o comando:
+```bash
+make down
 ```
 
 ### Rotas que o webserver fornece
