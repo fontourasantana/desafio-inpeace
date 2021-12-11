@@ -20,6 +20,12 @@ build-app:
 up:
 	@echo "\033[1;32mIniciando aplicação completa\033[0m"
 	@docker-compose up -d
+down:
+	@echo "\033[1;32mParando a execução da aplicação\033[0m"
+	@docker-compose down
 run-migrates:
 	@echo "\033[1;32mRodando migrations\033[0m"
 	@docker-compose exec api php artisan migrate
+run-seeders:
+	@echo "\033[1;32mRodando seeders\033[0m"
+	@docker-compose exec api php artisan db:seed --class=UsersTableSeeder
