@@ -36,7 +36,7 @@ cp .env.example .env
 ```bash
 make
 ```
-- Após a execução do comando `make` o projeto já estará executando, para detalhes das rotas acessas [Rotas do webserver](#rotas-do-webserver)
+- Após a execução do comando `make` o projeto já estará executando, para detalhes das rotas acessar [Rotas do webserver](#rotas-do-webserver)
 
 **Atenção:** Para o funcionamento adequado da API, é necessário rodar as migrations. Para isso rode o seguinte comando com o projeto em execução completamente inicializado (na primeira inicialização o serviço do mysql demora um pouco para inicializar por completo):
 ```bash
